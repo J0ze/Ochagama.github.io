@@ -1,4 +1,3 @@
-import { factory } from "typescript";
 import type {
 	AnnouncementConfig,
 	CommentConfig,
@@ -115,12 +114,11 @@ export const siteConfig: SiteConfig = {
 		depth: 3, // 目录深度，1-6，1 表示只显示 h1 标题，2 表示显示 h1 和 h2 标题，依此类推
 	},
 	favicon: [
-		// 留空以使用默认 favicon
-		// {
-		//   src: '/favicon/icon.png',    // 图标文件路径
-		//   theme: 'light',              // 可选，指定主题 'light' | 'dark'
-		//   sizes: '32x32',              // 可选，图标大小
-		// }
+		{
+		  src: '/favicon/icon.png',    // 图标文件路径
+		  theme: 'light',              // 可选，指定主题 'light' | 'dark'
+		  sizes: '32x32',              // 可选，图标大小
+		}
 	],
 };
 export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
