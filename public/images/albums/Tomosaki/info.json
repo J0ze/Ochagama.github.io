@@ -1,0 +1,10 @@
+{
+	"title": "Tomosaki",
+	"hidden": false,
+	"description": "这是一位来自日本的风景人像摄影师",
+	"date": "2025-09-09",
+	"location": "Japan",
+	"tags": ["风景", "摄影"],
+	"layout": "masonry",
+	"columns": 3
+}
