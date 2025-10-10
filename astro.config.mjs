@@ -29,7 +29,7 @@ import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 export default defineConfig({
 	site: "https://ochagama.xyz",
 
-	base: "/",
+	base: "/Ochagama.github.io",
 	trailingSlash: "always",
 	integrations: [
 		tailwind({
@@ -53,7 +53,7 @@ export default defineConfig({
 			animateHistoryBrowsing: false,
 			skipPopStateHandling: (event) => {
 				// 跳过锚点链接的处理，让浏览器原生处理
-				return event.state && event.state.url && event.state.url.includes("#");
+				return event.state?.url?.includes("#");
 			},
 		}),
 		icon({

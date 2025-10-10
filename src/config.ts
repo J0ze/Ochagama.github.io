@@ -67,7 +67,7 @@ export const siteConfig: SiteConfig = {
 		carousel: {
 			enable: true, // 为 true 时：为多张图片启用轮播。为 false 时：从数组中随机显示一张图片
 
-			interval:5, // 轮播间隔时间（秒）
+			interval: 5, // 轮播间隔时间（秒）
 		},
 
 		// PicFlow API支持(智能图片API)
@@ -83,12 +83,7 @@ export const siteConfig: SiteConfig = {
 			enable: true, // 在主页显示自定义文本
 			title: "Ochagama", // 主页横幅主标题
 
-			subtitle: [
-				"分享学习心得",
-				"记录学习成果",
-				"吐槽学校生活",
-				"喜欢您来",
-			],
+			subtitle: ["分享学习心得", "记录学习成果", "吐槽学校生活", "喜欢您来"],
 			typewriter: {
 				enable: true, // 启用副标题打字机效果
 
@@ -115,10 +110,10 @@ export const siteConfig: SiteConfig = {
 	},
 	favicon: [
 		{
-		  src: '/favicon/icon.png',    // 图标文件路径
-		  theme: 'light',              // 可选，指定主题 'light' | 'dark'
-		  sizes: '32x32',              // 可选，图标大小
-		}
+			src: "/favicon/icon.png", // 图标文件路径
+			theme: "light", // 可选，指定主题 'light' | 'dark'
+			sizes: "32x32", // 可选，图标大小
+		},
 	],
 };
 export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
@@ -172,7 +167,7 @@ export const navBarConfig: NavBarConfig = {
 					url: "https://space.bilibili.com/45996111",
 					external: true,
 					icon: "fa6-brands:bilibili",
-				}
+				},
 			],
 		},
 		{
