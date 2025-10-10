@@ -29,7 +29,7 @@ import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 export default defineConfig({
 	site: "https://ochagama.xyz",
 
-	base: "/Ochagama.github.io",
+	base: "/Ochagama.github.io/",
 	trailingSlash: "always",
 	integrations: [
 		tailwind({
