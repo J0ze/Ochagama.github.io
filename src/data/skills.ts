@@ -28,6 +28,16 @@ export const skillsData: Skill[] = [
 		level: "advanced",
 		experience: { years: 1, months: 6 },
 		color: "#F7DF1E",
+	},
+	{
+		id: "c#",
+		name: "C#",
+		description: "基本C#语法内容，主要用于Unity游戏开发",
+		icon: "logos:c#",
+		category: "backend",
+		level: "advanced",
+		experience: { years: 2, months: 1 },
+		color: "#66f71eff",
 	}
 ];
 
