@@ -30,10 +30,10 @@ export const skillsData: Skill[] = [
 		color: "#F7DF1E",
 	},
 	{
-		id: "c#",
-		name: "C#",
+		id: "csharp",
+		name: "Csharp",
 		description: "基本C#语法内容，主要用于Unity游戏开发",
-		icon: "logos:c#",
+		icon: "logos:csharp",
 		category: "backend",
 		level: "advanced",
 		experience: { years: 2, months: 1 },
