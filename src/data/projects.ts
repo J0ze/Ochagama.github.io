@@ -32,7 +32,21 @@ export const projectsData: Project[] = [
 		endDate: '2025-09-09',
 		featured: false,
 		tags: ['Blog', 'Theme', 'Open Source']
-	}
+	},
+	{
+		id: 'evadebug',
+		title: 'Evadebug',
+		description: '由校内六人团队开发的Unity引擎游戏',
+		image: '',
+		category: 'other',
+		techStack: ['C#', 'Unity', 'Zenject', 'P-SCM'],
+		status: 'completed',
+		sourceCode: '',
+		startDate: '2025-010-10',
+		endDate: '2025-10-27',
+		featured: true,
+		tags: ['Unity', 'Csharp', 'DVC','Zenject']
+	},
 ];
 
 // 获取项目统计信息

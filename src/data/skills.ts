@@ -33,7 +33,7 @@ export const skillsData: Skill[] = [
 		id: "c#",
 		name: "C#",
 		description: "基本C#语法内容，主要用于Unity游戏开发",
-		icon: "logos:c#",
+		icon: "skill-icons:cs",
 		category: "backend",
 		level: "advanced",
 		experience: { years: 2, months: 1 },
