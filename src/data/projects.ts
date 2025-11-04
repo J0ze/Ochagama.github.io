@@ -37,7 +37,7 @@ export const projectsData: Project[] = [
 		id: 'evadebug',
 		title: 'Evadebug',
 		description: '由校内六人团队开发的Unity引擎游戏',
-		image: '',
+		image: '/assets/project/evadebug.png',
 		category: 'other',
 		techStack: ['C#', 'Unity', 'Zenject', 'P-SCM'],
 		status: 'completed',
