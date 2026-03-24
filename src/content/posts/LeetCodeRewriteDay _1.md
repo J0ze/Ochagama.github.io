@@ -67,7 +67,7 @@ public:
           map[temp].push_back(std::move(str)); // 将相同字符排序的字符串压入对应容器
         }
         vector<vector<string>> res;
-       res.reserve(map.size()); //预先分配空间 (修正: 使用reserve只分配capacity)
+       res.reserve(map.size()); //预先分配空间 (使用reserve只分配capacity)
         for(auto&  [_, arr] : map){ // _是程序员习惯性的留空变量，也叫弃用变量
           res.push_back(std::move(arr));
         }
@@ -126,23 +126,42 @@ class Solution {
 private:
     unordered_map<int, int> parent;
     unordered_map<int, int> size;
-    int maxSize = 0; // 记录全场最大的集合大小 (修正: 变量声明)
+    int maxSize = 0; // 记录全场最大的集合大小 
 
     //查：路径压缩
     int find(int x){
-      if(parent[x] == x){ // 如果找到一个父节点为自己的点 说明是该分类的root节点 (修正: 避免死递归)
+      if(parent[x] == x){ // 如果找到一个父节点为自己的点 说明是该分类的root节点
         return x;
       }
       parent[x] = find(parent[x]); // 在递归寻找的同时将自己的父节点设为root节点 以压缩并查集
       return parent[x];
     }
+    /*
+        由于以上递归写法可能引起栈溢出，以下有更推荐的迭代写法：
+        int find(int x){
+            int root = x;
+            while(parent[root] != root){
+                root = parent[root];
+            }
+
+            手动回溯进行路径压缩
+            int curr = x;
+            while(curr != root){
+                int next = parent[curr];
+                parent[next] = root;
+                curr = next;
+            }
+            
+            return root;
+        }
+    */
   
     //并：按大小合并（小的并入大的）
     void unite(int x, int y){
       int rootX = find(x);
       int rootY = find(y);
       
-      if(rootX == rootY) return; // (补充: 如果已经在同一集合则跳过)
+      if(rootX == rootY) return;
 
       //让小的集合归入大的集合下 若1 合并到 2，然后2 再和 3进行合并，这时候应该是2 作为 3的根节点，因为2的size更大
       if(size[rootX] < size[rootY]){
@@ -163,7 +182,7 @@ public:
         if(!parent.count(x)){ // 去重
           parent[x] = x;
           size[x] = 1;
-          maxSize = max(maxSize, 1); // (修正: max函数调用)
+          maxSize = max(maxSize, 1);
         }
       }
       
@@ -174,7 +193,7 @@ public:
         }
       }
       
-      return maxSize; // (修正: 移入函数体内)
+      return maxSize;
     }
 };
 ```
