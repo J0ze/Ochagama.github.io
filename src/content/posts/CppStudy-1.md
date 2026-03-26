@@ -1,6 +1,6 @@
 ---
 title: "C++面经总结-1"
-published: 2026-01-15
+published: 2026-01-14
 pinned: false
 description: 记录 C++ 面试常考基础知识，包含虚函数表机制、虚指针产生时机以及构造/析构函数的多态性分析。
 tags: [C++, 面经, 面试, 虚函数, 多态]
