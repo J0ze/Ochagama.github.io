@@ -1,3 +1,15 @@
+---
+title: "MotionDriver源码分析"
+published: 2026-04-10
+pinned: false
+description: 对BBBNexus架构的物理驱动源码分析
+tags: [C#, Unity, 架构, BBBNexus, 物理]
+category: Analyze
+licenseName: "CC-BY-NC-SA 4.0"
+author: "海岬的人"
+draft: false
+---
+
 # BBBNexus 架构核心解析：MotionDriver (物理运动驱动系统)
 
 ## 0. 核心定位概述
