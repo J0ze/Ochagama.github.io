@@ -156,4 +156,5 @@ void processData(const HeavyData& data) { ... } // ✅ 完美通过，零拷贝
 
 ```cpp
 processData(HeavyData(d1)); // ✅ 显式调用拷贝构造
+//这里的HeavyData(d1)其实就是在显式的创建临时对象，我们避免了隐式的拷贝构造
 ```
