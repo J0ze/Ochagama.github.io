@@ -60,9 +60,7 @@ public:
 
 **代码验证法：**
 
-C++
-
-```
+```cpp
 // 如果 p2 是 p1 的拷贝
 if (p1.scores == p2.scores) {
     // 内存地址相同：发生了浅拷贝
@@ -77,9 +75,7 @@ if (p1.scores == p2.scores) {
 
 当我们手动实现深拷贝的赋值运算符时，标准写法总是要求返回当前对象的引用（`*this`）：
 
-C++
-
-```
+```cpp
 Player& operator=(const Player& other) {
     if (this != &other) {
         // ... 执行深拷贝逻辑 ...
@@ -107,9 +103,7 @@ Player& operator=(const Player& other) {
 
 对于单参数或多参数构造函数，不加 `explicit` 会导致荒谬的赋值合法化：
 
-C++
-
-```
+```cpp
 class Array {
 public:
     explicit Array(int size) { ... }
@@ -125,9 +119,7 @@ Array arr(10);    // ✅ 必须显式初始化
 
 把 `explicit` 加在拷贝构造函数前是一种极其严苛的设计，通常用于管理庞大资源（如 1GB 内存）的类，目的是**防止开发者在不知情的情况下触发耗时的拷贝。**
 
-C++
-
-```
+```cpp
 class HeavyData {
 public:
     explicit HeavyData(const HeavyData& other) { ... }
@@ -142,9 +134,7 @@ public:
 
 #### 详解：为什么按值传参会报错？
 
-C++
-
-```
+```cpp
 void processData(HeavyData data) { ... }
 HeavyData d1;
 processData(d1); // ❌ 编译报错！
@@ -158,16 +148,12 @@ processData(d1); // ❌ 编译报错！
 
 逼迫开发者使用按引用传参（这正是设计者的初衷）：
 
-C++
-
-```
+```cpp
 void processData(const HeavyData& data) { ... } // ✅ 完美通过，零拷贝
 ```
 
 或者，强制开发者大声宣告“我是故意要拷贝的”：
 
-C++
-
-```
+```cpp
 processData(HeavyData(d1)); // ✅ 显式调用拷贝构造
 ```
